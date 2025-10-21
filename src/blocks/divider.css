@@ -1,0 +1,13 @@
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #545454;
+  margin: 0 auto;
+  width: 880px;
+}
+
+@media screen and (max-width: 768px) {
+  .divider {
+    width: 320px;
+  }
+}
