@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import avatar from "../../images/JacquesCusteau.jpg";
 import Popup from "./popup/Popup"; // ruta relativa dentro de la carpeta main
 import NewCard from "./form/newcard/NewCard";
+import EditProfile from "./form/editprofile/EditProfile";
+import EditAvatar from "./form/editavatar/EditAvatar";
 
 // Si ya tienes los formularios como componentes, impórtalos:
 // import NewCard from "./form/newcard/NewCard";
@@ -16,29 +18,24 @@ export default function Main() {
     setPopup(null);
   };
 
-  // helpers para abrir popups (pásales title y children)
   function openNewCardPopup() {
-    // ejemplo si tienes el componente NewCard importado:
-    // setPopup({ title: "Nuevo lugar", children: <NewCard onAdd={handleAddCard} /> });
-
-    // temporal: ejemplo con texto hijo
     setPopup({
       title: "Nuevo lugar",
-      children: <div>Formulario NewCard aquí</div>,
+      children: <NewCard />,
     });
   }
 
   function openEditProfilePopup() {
     setPopup({
       title: "Editar perfil",
-      children: <div>Formulario EditProfile aquí</div>,
+      children: <EditProfile />,
     });
   }
 
   function openEditAvatarPopup() {
     setPopup({
       title: "Actualizar avatar",
-      children: <div>Formulario EditAvatar aquí</div>,
+      children: <EditAvatar />,
     });
   }
 

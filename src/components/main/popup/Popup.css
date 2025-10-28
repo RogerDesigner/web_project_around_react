@@ -1,4 +1,28 @@
 .popup {
   /* visibility: hidden; */
   /* opacity: 0; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* por ejemplo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup__close {
+  background-image: url("/src/images/close-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
 }
