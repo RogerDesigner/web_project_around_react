@@ -5,11 +5,33 @@ import Popup from "./popup/Popup"; // ruta relativa dentro de la carpeta main
 import NewCard from "./form/newcard/NewCard";
 import EditProfile from "./form/editprofile/EditProfile";
 import EditAvatar from "./form/editavatar/EditAvatar";
+import Card from "./components/card/Card";
 
 // Si ya tienes los formularios como componentes, impórtalos:
 // import NewCard from "./form/newcard/NewCard";
 // import EditProfile from "./form/editprofile/EditProfile";
 // import EditAvatar from "./form/editavatar/EditAvatar";
+
+const cards = [
+  {
+    isLiked: false,
+    _id: "5d1f0611d321eb4bdcd707dd",
+    name: "Yosemite Valley",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg",
+    owner: "5d1f0611d321eb4bdcd707dd",
+    createdAt: "2019-07-05T08:10:57.741Z",
+  },
+  {
+    isLiked: false,
+    _id: "5d1f064ed321eb4bdcd707de",
+    name: "Lake Louise",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg",
+    owner: "5d1f0611d321eb4bdcd707dd",
+    createdAt: "2019-07-05T08:11:58.324Z",
+  },
+];
+
+console.log(cards);
 
 export default function Main() {
   const [popup, setPopup] = useState(null);
@@ -84,7 +106,11 @@ export default function Main() {
         <h2 className="elements__title" hidden>
           Galería de tarjetas
         </h2>
-        <ul className="cards__list">{/* aquí luego mapearemos <Card /> */}</ul>
+        <ul className="cards__list">
+          {cards.map((card) => (
+            <Card key={card._id} card={card} />
+          ))}
+        </ul>
       </section>
       {/* === FIN DEL MARCADO TRANSFERIDO (SIN POPUPS) === */}
 
