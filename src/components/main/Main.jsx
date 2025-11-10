@@ -9,11 +9,6 @@ import Card from "./components/Card/Card";
 import ImagePopup from "./components/imagepopup/ImagePopup";
 import RemoveCard from "./form/removecard/RemoveCard";
 
-// Si ya tienes los formularios como componentes, impórtalos:
-// import NewCard from "./form/newcard/NewCard";
-// import EditProfile from "./form/editprofile/EditProfile";
-// import EditAvatar from "./form/editavatar/EditAvatar";
-
 export default function Main() {
   const [cards, setCards] = useState([
     {
